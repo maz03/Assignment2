@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Page</title>
+
+    <link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+</head>
+
+<body style="background-color: #2C3E50">
+	<!--Header-->
+	<header class="row" style="min-height: 15vh; background-color: var(--header-color);">
+		<!--Title-->
+		<div class="col-12 col-md-12 col-lg-8 m-0 p-0 d-flex align-items-center justify-content-center" style="min-height: 17vh;">
+			<h1 class="text-white text-center">PHONE FIX BOOKING SYSTEM</h1>
+		</div>
+		<!--Navbar-->
+		<div class="text-white col-12 col-md-12 col-lg-4 row h-25 m-0 p-0" style="background-color: var(--nav-color)">
+			<div class="col-12 col-md-6 col-lg-25 border border-primary text-center"><a href="index.html">HOME</a></div>
+			<div class="col-12 col-md-6 col-lg-6 border border-primary text-center"><a href="extension.html">EXTENSION</a></div>
+		</div>	
+	</header>
+	
+	<!---sidebar of 5 advanced js--->
+	<div class="row">
+		<div class="col-12 col-lg-3 row btn-demo-area h-50">
+			<button class="col-4 col-lg-12 bg-primary">Photo Upload</button>
+			<button class="col-4 col-lg-12 bg-danger">Chatbot</button>
+			<button class="col-4 col-lg-12 bg-secondary">Address Autocompletion</button>
+			<button class="col-4 col-lg-12 bg-success">Drag and drop</button>
+			<button class="col-4 col-lg-12 bg-warning">Geolocation</button>
+			<p></p>
+			<p class="bg-primary mt-9"><b>Statement of authenticity</b><br>
+			I confirm that:<br> 
+			• This is an original assessment and is entirely my own work.<br>
+			• It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text. <br>
+			• No material which to a substantial extent, has been submitted for any other academic course, is included without acknowledgement.<br>
+			</p>
+		</div>
+
+		<!---File upload HTML--->
+		<!---Reference: https://codepen.io/danieldang123/pen/eYKYJoo --->
+		<div class="col-12 col-lg-9 bg-dark content-demo-area" style="min-height: 75vh;">
+			<div class="bg-primary" style="min-height: 75vh;">
+				<h1>Advanced JS: File Upload</h1>
+				<input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+				<section id="display-image"></section>
+			</div>
+			
+			<!---Chatbot HTML--->
+			<!---Reference: https://codepen.io/danieldang123/pen/wvXvMNp --->
+			<div class="bg-secondary" style="min-height: 75vh;">
+				<h2>Chatbot</h2>
+				<p>	This chatbot is a representation of human to AI communication. Not fully functioning yet.
+				</p>
+				<section>
+					<iframe allow="microphone;" width="350" height="430" 
+					src="https://console.dialogflow.com/api-client/demo/embedded/3e774120-ea82-46c8-8b79-c5082562172c">
+					</iframe>
+				</section>
+			</div>
+			
+			<!---Address Autocomplete HTML--->
+			<!---Reference: https://codepen.io/davebra/pen/WXeZoY --->
+			<div class="bg-warning" style="min-height: 75vh;">
+				<section class="container">
+					<section class="row justify-content-md-center">
+						<section class="col-md-6">
+							<h3 style="padding:40px 0;">Google Address Autocomplete</h3>
+								<section class="form-group" id="locationField">
+									<input type="text" class="form-control" id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" />
+								</section>
+		  
+							<form role="form" id="form">
+		  
+								<section class="form-group">
+									<label>Full Address</label>
+									<input type="text" class="form-control" id="address" />
+								</section>
+							  
+								<section class="form-group">
+									<label>Suburb</label>
+									<input type="text" class="form-control" id="suburb" />
+								</section>
+							  
+								<section class="form-group">
+									<label>State</label>
+									<input type="text" class="form-control" id="region" />
+								</section>
+							  
+								<section class="form-group">
+									<label>Postal Code</label>
+									<input type="text" class="form-control" id="postal_code" />
+								</section>
+
+								<section class="form-group">
+									<label>Country</label>
+									<input type="text" class="form-control" id="country" placeholder="Country" />
+								</section>
+								
+							</form>
+						</section>
+					</section>
+				</section>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3NQcP2xQrv_Bzwq2MdXlgGBxsC8hlEZM&libraries=places&callback=initAutocomplete" async defer></script>
+			</div>
+			
+			<!---Drag and drop HTML--->
+			<!---Reference: https://codepen.io/danieldang123/pen/oNemXpr --->
+			<div class="bg-danger" style="min-height: 75vh;">
+				<h2>jQuery Demo: Drag and Drop</h2>
+				<!--Drag Area Box 1: Available Courtesy Phones-->
+				<section class="drag-area">
+					<section class="drop-area">Available Courtesy Phones</section>
+					<section class="box iphone-image">iPhone</section>
+					<section class="box samsung-image">Samsung A6+</section>
+					<section class="box galaxy-image">Galaxy Z</section>
+					<section class="box charger-image">Charger</section>
+				</section>
+
+				<!--Drag Area Box 2: Your Choice-->
+				<section class="drag-area">
+				  <section class="drop-area">Your Selection</section>
+				</section>
+
+				<!--Display the outcome-->
+				<section class="result">-</section>
+			</div>
+			
+			<!---Geolocation HTML--->
+			<!---Reference: https://codepen.io/danieldang123/pen/LYrYNPN --->
+			<div class="bg-success" style="min-height: 75vh;">
+				<h1>Advanced JS: HTML Geolocation - show the shop location on Google Map</h1>
+				<h2>Click the button to get your coordinates.</h2>
+				<button onclick="getLocation()">Get current location</button>         
+				<p id="demo"></p>
+				<br>
+				<h3>Calculate the distance between the current  user location to shop location: It's your turn</h3>
+			</div>
+		</div>
+	</div>
+	
+	<!--Footer-->
+	
+	<footer class="text-white d-flex align-items-center justify-content-center" style="background-color: var(--footer-color); min-height: 10vh;">
+		<h5>ADVANCED WEB DEVELOPMENT @2022</h5>
+	</footer>
+	
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="javascript.js"></script>
+
+</html>
